@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="row">
+      <div class="col">
+      </div>
+      <div class="col form-group mt-4 h-100">
+        <img [src]="LOGO" [@photoState]="postion" class="photo" width="400" height="200" >
+      </div>
+      <div class="col">
+      </div>
+    </div>
+  <div class="row">
+        <div class="col">
+        </div>
+    <div class="col ">
+        <button (click)= "changPostion('move')" class="button"> Move L</button>
+        <button (click)= "changPostion('spin')" class="button"> Rotat</button>
+        <button (click)= "changPostion(null)" class="button"> Reset</button>
+        <button (click)= "changPostion('enlarge')" class="button"> Scale</button>
+        <button (click)= "changPostion('moveR')" class="button"> Move R</button>
+    </div> 
+    <div class="col">
+    </div> 
+    </div>
+    <div>
+            <input type="text" placeholder="search by name" #myInput [(ngModel)]="name" (input)="search()"/>
+            <table class="table mt-3">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>UserName</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                    </tr>
+                    <tr *ngFor='let item of employee'>
+                        <td>{{item.id}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.username}}</td>
+                        <td>{{item.email}}</td>
+                        <td>{{item.phone}}</td>
+                    </tr>
+                    </table>
+    </div>
+</div>
+
